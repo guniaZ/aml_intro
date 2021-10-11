@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuestionActivity">
+
+    <ImageButton
+        android:id="@+id/finish_button"
+        android:layout_width="149dp"
+        android:layout_height="58dp"
+        android:layout_below="@+id/question_group"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="104dp"
+        android:background="@drawable/button"
+        android:onClick="showScores"
+        android:text="@string/finish_quiz_button_label"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/question_group"
+        android:layout_width="325dp"
+        android:layout_height="136dp"
+        android:layout_below="@+id/question_text"
+        android:layout_alignLeft="@+id/question_text"
+        android:orientation="vertical"
+        android:paddingRight="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/finish_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question_text"
+        app:layout_constraintVertical_bias="0.143">
+
+
+        <RadioButton
+            android:id="@+id/answer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:lineSpacingExtra="5dp"
+            android:onClick="recordAnswer"
+            android:text="Tak."
+            android:textColor="#00aced"
+            android:textSize="5pt"
+            tools:layout_editor_absoluteX="64dp"
+            tools:layout_editor_absoluteY="131dp" />
+
+        <RadioButton
+            android:id="@+id/answer3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:lineSpacingExtra="5dp"
+            android:onClick="recordAnswer"
+            android:text="Sam(a) chciał(a)bym taką mieć."
+            android:textColor="#00aced"
+            android:textSize="5pt"
+            tools:layout_editor_absoluteX="64dp"
+            tools:layout_editor_absoluteY="243dp" />
+
+        <RadioButton
+            android:id="@+id/answer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:lineSpacingExtra="5dp"
+            android:onClick="recordAnswer"
+            android:text="Zdecydowanie tak."
+            android:textColor="#00aced"
+            android:textSize="5pt"
+            tools:layout_editor_absoluteX="64dp"
+            tools:layout_editor_absoluteY="186dp" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/question_text"
+        android:layout_width="349dp"
+        android:layout_height="61dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="48dp"
+        android:lineSpacingMultiplier="1.3"
+        android:paddingRight="50dp"
+        android:text="Czy podoba Ci się broda prowadzącego?"
+        android:textColor="#00aced"
+        android:textSize="9pt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/finish_quiz_button_label"
+        app:layout_constraintBottom_toBottomOf="@+id/finish_button"
+        app:layout_constraintEnd_toEndOf="@+id/finish_button"
+        app:layout_constraintStart_toStartOf="@+id/finish_button"
+        app:layout_constraintTop_toTopOf="@+id/finish_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
