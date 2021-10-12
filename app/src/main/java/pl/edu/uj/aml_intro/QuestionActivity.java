@@ -52,7 +52,7 @@ public class QuestionActivity extends AppCompatActivity {
         rb2.setText(q.answers[1]);
         rb3.setText(q.answers[2]);
 
-        Log.d(TAG, "onCreate");
+        Log.d(TAG, "onCreate ");
 
 
     }
@@ -70,8 +70,6 @@ public class QuestionActivity extends AppCompatActivity {
     protected void onResume() {
         // TODO Auto-generated method stub
         super.onResume();
-
-        Log.d(TAG, "onResume");
     }
 
     @Override
@@ -103,6 +101,8 @@ public class QuestionActivity extends AppCompatActivity {
         Log.d(TAG,"onDestroy");
     }
 
+
+
     /**
      *  UNCOMENT FOR SAVING/RESTORING STATE
      *
@@ -110,23 +110,20 @@ public class QuestionActivity extends AppCompatActivity {
      protected void onSaveInstanceState(Bundle outState) {
      // Save the answer
      outState.putInt(USER_ANSWER, q.answer);
-
      // Always call the superclass so it can save the view hierarchy state
      super.onSaveInstanceState(outState);
      }
-
      @Override
      protected void onRestoreInstanceState(Bundle savedInstanceState) {
      // Always call the superclass so it can restore the view hierarchy
      super.onRestoreInstanceState(savedInstanceState);
-
      // Restore the answer
      q.answer = savedInstanceState.getInt(USER_ANSWER);
      }
-
       * UNCOMENT FOR SAVING/RESTORING STATE
      *
      **/
+
 
 
     public void recordAnswer(View view){
